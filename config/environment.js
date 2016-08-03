@@ -12,6 +12,12 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
+    contentSecurityPolicy: {
+      'style-src': '\'self\' \'unsafe-inline\' fonts.googleapis.com',
+      'font-src': '\'self\' fonts.gstatic.com',
+      'img-src': '\'self\' *.gravatar.com data:',
+      'connect-src': '\'self\' http://localhost:60101'
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance
